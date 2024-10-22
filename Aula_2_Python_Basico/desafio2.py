@@ -55,9 +55,51 @@ if login_aceito == True:
     tips_bem_sucedidas: int = 0
     total_tips: int = 0
     imposto_total: float = 0
-
     
+    # Calculo do Fator de Reducao
+    if (tipo=="Básico"):
+        fator_reducao: float = 0.0
+    elif (tipo=="Prata"):
+        fator_reducao: float = 0.05
+    if (tipo=="Premium"):
+        fator_reducao: float = 0.2
+
     while continuar_apostando:
         valor_apostado: float = float(input("Digite o valor apostado: "))
         valor_ganho: float = float(input("Digite o valor ganho: "))
+        lucro_bruto: float = float(valor_ganho - valor_apostado)
+        # Calculo do Imposto
+        if lucro_bruto < 0:
+            imposto: float = 0.0
+        elif lucro_bruto < 100:
+            imposto: float = 0.05 * lucro_bruto
+        elif lucro_bruto < 1000:
+            imposto: float = 0.15 * lucro_bruto
+        elif lucro_bruto >= 1000: # Poderia ser escrito como "else:"
+            imposto: float = 0.20 * lucro_bruto
+        
+        lucro_liquido: float = lucro_bruto - imposto * (1 - fator_reducao)
+        
+        # Atualização de Totais
+        lucro_liquido_total += lucro_liquido
+        valor_total_apostado += valor_apostado
+        if lucro_bruto > 0:
+            tips_bem_sucedidas += 1
+        total_tips += 1
+        imposto_total += imposto
+        
+        # Verificação de Saída
+        parar_apostar: str = input("Voce deseja parar de apostar? Digite 'Sim' ou 'Nao': ")
+        if parar_apostar == "Sim":
+            continuar_apostando = False
+            
+    # Calculo da % de Tips Bem Suced
+    tips_bem_sucedidas = (tips_bem_sucedidas / total_tips)
+    print(f"Nome do Usuário: {nome}")
+    print(f"Lucro liquido total: R$ {lucro_liquido_total}")
+    print(f"Valor apostado total: R$ {valor_total_apostado}")
+    print(f"% de tips bem sucedidas: {tips_bem_sucedidas}")
+    print(f"Total imposto pago: R$ {imposto_total}")
+        
+        
     
