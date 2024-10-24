@@ -1,0 +1,9 @@
+[
+    {
+        "owner_id": [0],
+        "admins_id": [0, 5],
+        "group_name": "Grupo do Vitao",
+        "id": 5,
+        "users_ids": [0, 2, 5, 6]
+    }
+]
