@@ -1,0 +1,33 @@
+[
+    {
+        "bet_id": "1",
+        "date_made": "2023-10-01T14:30:00Z",
+        "userid": "123",
+        "bet_on": {
+            "event": "Football Match",
+            "teams": ["Team A", "Team B"],
+            "bet_type": "win",
+            "bet_on_team": "Team A"
+        },
+        "amount": 100.0,
+        "odds": 1.5,
+        "status": "pending"
+    },
+    {
+        "bet_id": "2",
+        "date_made": "2023-10-02T16:45:00Z",
+        "user": {
+            "user_id": "456",
+            "username": "jane_smith"
+        },
+        "bet_on": {
+            "event": "Tennis Match",
+            "players": ["Player X", "Player Y"],
+            "bet_type": "win",
+            "bet_on_player": "Player X"
+        },
+        "amount": 50.0,
+        "odds": 2.0,
+        "status": "won"
+    }
+]

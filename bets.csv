@@ -1,0 +1,6 @@
+BetID,UserID,Event,BetAmount,Odds,BetDate,Outcome
+1,101,Football Match,50,2.5,2023-10-01,Win
+2,102,Basketball Game,30,1.8,2023-10-02,Lose
+3,103,Horse Race,20,5.0,2023-10-03,Win
+4,104,Tennis Match,40,2.0,2023-10-04,Lose
+5,105,Boxing Match,25,3.5,2023-10-05,Win
