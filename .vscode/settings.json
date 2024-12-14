@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "Aula_4_Funcoes"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
