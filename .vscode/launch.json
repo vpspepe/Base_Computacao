@@ -4,7 +4,7 @@
             "name": "Python Debugger: Python File",
             "type": "debugpy",
             "request": "launch",
-            "program": "${cwd}/Aula_4_Funcoes/",
+            "program": "${cwd}/Aula_4_Funcoes/test.py",
         }
     ]
 }
